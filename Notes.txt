@@ -1,0 +1,2 @@
+To consider different aspect ratios you could stretch, add black bars or croppign edges. We'll go with cropping, quiet zones are areas that could be cut without losing the meaning.
+Screen match mode: Matching on height or width puts in bars on changing ratios. With shrink it crops the edges for the ratio. Select it from the Canvas.
