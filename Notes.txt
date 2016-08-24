@@ -7,3 +7,7 @@ When building for mobile, .mp3 musics are better than .oggs, because ogg doesn't
 Create prefabs when you have repeatable elements. For example buttons.
 
 To fade in a screen add a UI -> Panel.
+
+Playerprefs. They are persistent storage on the machine. This is unencrypted storage. A hacker could unlock it. It's slow to access, slow to access it on a frame by frame basis.
+Limitations of playerprefs: slow to read and write, max file size 1MB, only supports Float, Int, String.
+Write a wrapper for it to know for certain what keys we have, add error handling etc. Makes it safer.
