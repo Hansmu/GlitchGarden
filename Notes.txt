@@ -3,3 +3,5 @@ Screen match mode: Matching on height or width puts in bars on changing ratios. 
 Use expand when you don't have quiet zones.
 
 When building for mobile, .mp3 musics are better than .oggs, because ogg doesn't work on iOS.
+
+Create prefabs when you have repeatable elements. For example buttons.
