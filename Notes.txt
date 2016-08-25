@@ -11,3 +11,7 @@ To fade in a screen add a UI -> Panel.
 Playerprefs. They are persistent storage on the machine. This is unencrypted storage. A hacker could unlock it. It's slow to access, slow to access it on a frame by frame basis.
 Limitations of playerprefs: slow to read and write, max file size 1MB, only supports Float, Int, String.
 Write a wrapper for it to know for certain what keys we have, add error handling etc. Makes it safer.
+
+Animation
+Sprite sheets are frames of an animation.Bone based animation is having bits of the body apart and then moving those arounda  pivot point. Working out the grids for
+Unity's slice. Grid width = image width / columns. Grid height = image height / rows.
