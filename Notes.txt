@@ -27,5 +27,19 @@ Screen math ratio
 Example 4:3
 That means you have 4 units of measurement in one way and 3 the other.
 If you want a screen to get smaller with the same ratio, for example 11, then you'd multiply with the smaller fraction ex. 11 * 3/4.
-If you want a screen to get bigger with the same ratio, for exmaple 11, then you'd multiply with the bigger fraction ex. 11 * 4/3.
+If you want a screen to get bigger with the same ratio, for example 11, then you'd multiply with the bigger fraction ex. 11 * 4/3.
 If you'd have a screen with the height of 4cm, then to get the width on a 16:9 screen, you'd do 4cm * 16 / 9 = 64 / 9 = 7 cm
+https://en.wikipedia.org/wiki/UV_mapping
+For our game the game design document dictates that we have the space 9 tiles/columns wide in 4:3 aspect. 
+Since we want to scale it to a higher resolution then to get the tiles for it we need to do 9 * 4/3 = 12 tiles wide in 16:9.
+There are 2 grass squares per tile (full in the middle, half on either side) so with our grass we'd divide it with 2. Therefore the width is 12/2 = 6.
+Considering the aspect ratio we'd get the height as 6 / 16 * 9 = 3.375 (single unit is 6/16 = 0.375 and the height is 9 units 0.375 * 9 = 3.375)
+
+We add a panel to see where our core game focuses. Set it to track our smallest ratio 4:3. Since we're at 1600 pixels x 900 pixels wide with 16:9, to scale it down
+we need to do 1600 * 3/4 = 1200 pixels wide. For some reason we get the height for 16:9??? that comes to 675.
+
+Now translate and scale the level canvas.
+1 grass square = 1m = 1 world unit
+Width is 1600 pixels and 12 world units wide.
+Pixels per world unit = 1600 / 12 = 133.3(3)
+Scale level canvas 12 / 1600 = 0.0075
