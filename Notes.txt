@@ -22,3 +22,10 @@ Drag one of the sprites as a placeholder
 Add an Animator
 Go into Animation window
 Create new clip
+
+Screen math ratio
+Example 4:3
+That means you have 4 units of measurement in one way and 3 the other.
+If you want a screen to get smaller with the same ratio, for example 11, then you'd multiply with the smaller fraction ex. 11 * 3/4.
+If you want a screen to get bigger with the same ratio, for exmaple 11, then you'd multiply with the bigger fraction ex. 11 * 4/3.
+If you'd have a screen with the height of 4cm, then to get the width on a 16:9 screen, you'd do 4cm * 16 / 9 = 64 / 9 = 7 cm
