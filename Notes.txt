@@ -15,3 +15,10 @@ Write a wrapper for it to know for certain what keys we have, add error handling
 Animation
 Sprite sheets are frames of an animation.Bone based animation is having bits of the body apart and then moving those arounda  pivot point. Working out the grids for
 Unity's slice. Grid width = image width / columns. Grid height = image height / rows.
+
+Making a 2D animation
+Create an empty GameObject
+Drag one of the sprites as a placeholder
+Add an Animator
+Go into Animation window
+Create new clip
