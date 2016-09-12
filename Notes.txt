@@ -43,3 +43,7 @@ Now translate and scale the level canvas.
 Width is 1600 pixels and 12 world units wide.
 Pixels per world unit = 1600 / 12 = 133.3(3)
 Scale level canvas 12 / 1600 = 0.0075
+
+A game object can have a single animator. An animator can have one or more animation states. Animation state has an animation clip, transitions, parameters. 
+Press on the transition line to specify transition based on a variable. Specify the variable under "Parameters". In the animation state you can select Motion to specify
+your animation.
