@@ -47,3 +47,12 @@ Scale level canvas 12 / 1600 = 0.0075
 A game object can have a single animator. An animator can have one or more animation states. Animation state has an animation clip, transitions, parameters. 
 Press on the transition line to specify transition based on a variable. Specify the variable under "Parameters". In the animation state you can select Motion to specify
 your animation.
+
+When you click on the sprite sheet, you can see Max Size in the Inspector. This can cause your sprites to be fuzzy if you downscale too much. Having it a 4096 gives the best clarity, however
+it makes it bigger and older devices might not like it. Leaving Compressed in Format is generally the way. 
+Can pack our sprite sheets more tightly to optimize. Can use TexturePacker and Shoebox for it. It's a lot of messing around with it.
+MIP Mapping - a technique where an original high-resolution texture map is scaled and filtered into multiple resolutions within the texture file. Takes up 33% more space, but much faster.
+Not needed if we're at a fixed distance. If you scroll out of your model, then it turns fuzzy and that's to do with MIP Mapping, it scales it down so it'd take up less space.
+How to prevent a fuzzy sprite: check your sprite sheet size in pixels, look at the maximum X or Y dimension. Ensure your texture "Max Size" is larger or compact your sprite sheet.
+You can leave compression on though.
+
