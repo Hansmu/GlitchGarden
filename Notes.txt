@@ -56,3 +56,5 @@ Not needed if we're at a fixed distance. If you scroll out of your model, then i
 How to prevent a fuzzy sprite: check your sprite sheet size in pixels, look at the maximum X or Y dimension. Ensure your texture "Max Size" is larger or compact your sprite sheet.
 You can leave compression on though.
 
+Bone based animation
+Having a sprite as different pieces and then putting in pivot points to the different pieces - bones and then pivoting them around the points.
