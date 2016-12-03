@@ -71,3 +71,8 @@ Add SpriteRenderer property to body object. Drag the sprite sheet objects into t
 appearing time.
 
 If there are no actions, then the exit time is the number of seconds, otherwise it's the number of cycles.
+
+Unity Remote App
+Go to Edit -> Project Settings -> Editor. Device -> Any Android Device or iOS. Install Unity Remote on your phone. Connect phone with the computer using the USB. Need to run the game window
+at the correct resolution to make it look correct on the device.
+Might not always work, have to mess around with developer options then.
