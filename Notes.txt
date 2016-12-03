@@ -58,3 +58,16 @@ You can leave compression on though.
 
 Bone based animation
 Having a sprite as different pieces and then putting in pivot points to the different pieces - bones and then pivoting them around the points.
+
+Character animation
+Create a character parent and a character child object. Parent has "Animator", Body has "Sprite Renderer". Create an "Animator controller" add it to the "Animator". Create a new
+clip under Animator. Add a "Sprite" property to the Animation. Drag your sprite sheet sprites to the Animation. Delete the default sprites. Make sure th
+Create a empty child object on the sprite. Call it "Body". We do this because we want to move the top level object in script, but the animation to occur on the body. We want the lizard to sit
+in the middle of a square. We want independent control of the location of the body and everything else. Use the parent object to add the sprite into the square system and use
+the body to do minor tweaks to the location.
+Ensure there is an animator on the parent object.
+Convert sprite sheet into seperate frames.
+Add SpriteRenderer property to body object. Drag the sprite sheet objects into the Animation tab. With the lizard, we have 24 objects, we want set the samples to 24 as well so we could easily work out
+appearing time.
+
+If there are no actions, then the exit time is the number of seconds, otherwise it's the number of cycles.
