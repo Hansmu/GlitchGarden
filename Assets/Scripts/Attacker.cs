@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class Attacker : MonoBehaviour {
 
-	[Range(-1f, 1.5f)] //Adds a slider
 	public float walkSpeed;
+	private GameObject currentTarget;
 
 	// Use this for initialization
 	void Start () {
@@ -19,5 +20,17 @@ public class Attacker : MonoBehaviour {
 
 	void OnTriggerEnter2D() {
 		Debug.Log(name + " trigger enter.");
+	}
+
+	public void SetSpeed(float speed) {
+		walkSpeed = speed;
+	}
+
+	public void HitTarget(float damage) { //Called from the animator at time of attack
+		Debug.Log(name + " caused damage " + damage);
+	}
+
+	public void Attack(GameObject targetToAttack) { //Puts attacker into attack mode
+		currentTarget = targetToAttack;
 	}
 }

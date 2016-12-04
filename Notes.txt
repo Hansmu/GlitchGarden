@@ -76,3 +76,9 @@ Unity Remote App
 Go to Edit -> Project Settings -> Editor. Device -> Any Android Device or iOS. Install Unity Remote on your phone. Connect phone with the computer using the USB. Need to run the game window
 at the correct resolution to make it look correct on the device.
 Might not always work, have to mess around with developer options then.
+
+You can add function calls into the animator by choosing the time and then clicking on the pencil looking button with a plus. It calls functions from the scripts that are
+attached to the object where the Animation Controller is attached to. Can't call a script that's on the child.
+Once you've added the pointy pencil, double click on it and select the function you want to call.
+
+Use a trigger when an action transition is a one off, use a bool when you have to stay there for a certain amount of time.
