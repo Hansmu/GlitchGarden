@@ -84,3 +84,5 @@ Once you've added the pointy pencil, double click on it and select the function 
 Use a trigger when an action transition is a one off, use a bool when you have to stay there for a certain amount of time.
 
 For projectiles also add subojects to hold their sprites.
+Animator can reach into private methods.
+When adding gameobjects to prefabs, add a prefab to a prefab, not an instance to an instance.
