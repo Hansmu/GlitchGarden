@@ -82,3 +82,5 @@ attached to the object where the Animation Controller is attached to. Can't call
 Once you've added the pointy pencil, double click on it and select the function you want to call.
 
 Use a trigger when an action transition is a one off, use a bool when you have to stay there for a certain amount of time.
+
+For projectiles also add subojects to hold their sprites.
