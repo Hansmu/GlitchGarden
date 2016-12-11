@@ -5,6 +5,8 @@ using System.Collections;
 public class Attacker : MonoBehaviour {
 
 	public float walkSpeed;
+	public float seenAfterEverySeconds;
+
 	private GameObject currentTarget;
 	private Animator animator;
 

@@ -18,8 +18,10 @@ public class DefenderSpawner : MonoBehaviour {
 	void OnMouseDown() {
 		Vector2 clickGridLocation = SnapToGrid(CalculateWorldPointOfMouseClick());
 		GameObject defender = Button.selectedDefender;
+	
 		Quaternion zeroRotation = Quaternion.identity;
 		GameObject newDefender = Instantiate(Button.selectedDefender, clickGridLocation, zeroRotation) as GameObject;
+
 		newDefender.transform.parent = defenderParent.transform;
 	}
 
