@@ -89,3 +89,6 @@ When adding gameobjects to prefabs, add a prefab to a prefab, not an instance to
 
 Creating icons for the bar.
 We scaled the sprites down, say a gnome to 0.5834973. In order to have them fit into ordered squares in the icon area divide 1/0.5834973 and then you get the size of the Box Collider for the icon.
+
+GameObject.FindObjectOfType<>() Used when the object is on a different Game Object.
+GetComponent<>() Used when the object is on the same Game Object.

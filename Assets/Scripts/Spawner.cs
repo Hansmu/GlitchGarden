@@ -4,8 +4,7 @@ using System.Collections;
 public class Spawner : MonoBehaviour {
 
 	public GameObject[] attackersToSpawn;
-	
-	// Update is called once per frame
+
 	void Update () {
 		foreach(GameObject attackerObject in attackersToSpawn) {
 			if (isTimeToSpawn(attackerObject)) {
@@ -25,10 +24,7 @@ public class Spawner : MonoBehaviour {
 
 		float threshold = spawnsPerSecond * Time.deltaTime / 5; 
 
-		if(Random.value < threshold) {
-			return true;
-		}
-		return false;
+		return Random.value < threshold;
 	}
 
 	void Spawn(GameObject gameObject) {
