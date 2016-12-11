@@ -6,9 +6,11 @@ public class DefenderSpawner : MonoBehaviour {
 	public Camera myCamera;
 
 	private GameObject defenderParent;
+	private CurrencyDisplay currencyDisplay;
 
 	void Start() {
 		defenderParent = GameObject.Find("Defenders");
+		currencyDisplay = GameObject.FindObjectOfType<CurrencyDisplay>();
 
 		if (!defenderParent) {
 			defenderParent = new GameObject("Defenders");
@@ -18,7 +20,14 @@ public class DefenderSpawner : MonoBehaviour {
 	void OnMouseDown() {
 		Vector2 clickGridLocation = SnapToGrid(CalculateWorldPointOfMouseClick());
 		GameObject defender = Button.selectedDefender;
-	
+		int defenderCost = defender.GetComponent<Defenders>().currencyCost;
+
+		if (currencyDisplay.UseCurrency(defenderCost) == CurrencyDisplay.Status.SUCCESS) {
+			SpawnDefender(clickGridLocation);
+		}
+	}
+
+	void SpawnDefender(Vector2 clickGridLocation) {
 		Quaternion zeroRotation = Quaternion.identity;
 		GameObject newDefender = Instantiate(Button.selectedDefender, clickGridLocation, zeroRotation) as GameObject;
 

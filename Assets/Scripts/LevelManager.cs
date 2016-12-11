@@ -18,6 +18,10 @@ public class LevelManager : MonoBehaviour {
 		Application.LoadLevel(name);
 	}
 
+	public void LoadLoseLevel() {
+		LoadLevel("03b_Lose");
+	}
+
 	public void QuitRequest() {
 		Application.Quit();
 	}

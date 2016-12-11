@@ -3,17 +3,14 @@ using System.Collections;
 
 public class Defenders : MonoBehaviour {
 
-	// Use this for initialization
+	public int currencyCost = 100;
+	private CurrencyDisplay currencyDisplay;
+
 	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+		currencyDisplay = GameObject.FindObjectOfType<CurrencyDisplay>();
 	}
 
-	void OnTriggerEnter2D() {
-		Debug.Log(name + " trigger enter.");
+	public void AddCurrency(int amount) {
+		currencyDisplay.AddCurrency(amount);
 	}
 }
