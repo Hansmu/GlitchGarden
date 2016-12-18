@@ -23,9 +23,7 @@ public class Jumper : MonoBehaviour {
 			return;
 		}
 
-		if(objectCollidedWith.GetComponent<Stone>()) { //Detects on scripts attached to the component.
-			animator.SetTrigger("jumpTrigger");
-		} else if(objectCollidedWith.GetComponent<Blocker>()) {
+		if(objectCollidedWith.GetComponent<Blocker>()) {
 			animator.SetTrigger("jumpTrigger");
 		} else {
 			animator.SetBool("isAttacking", true);
