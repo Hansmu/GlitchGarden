@@ -27,7 +27,19 @@ public class Blocker : MonoBehaviour {
 		}
 	}
 
+	void OnTriggerExit2D(Collider2D collider) {
+		Debug.Log("Exited!");
+
+		if (animator.GetBool("isAttacking")) {
+			animator.SetBool("isAttacking", false);
+		}
+	}
+
 	public void DealDamageToAttacker(float damage) {
-		attackerHealth.DealDamage(damage);
+		if(attackerHealth) {
+			attackerHealth.DealDamage(damage);
+		} else {
+			animator.SetBool("isAttacking", false);
+		}
 	}
 }
