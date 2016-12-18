@@ -12,8 +12,9 @@ public class Blocker : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collider) {
 		Attacker attacker = collider.gameObject.GetComponent<Attacker>();
+		Jumper jumper = collider.gameObject.GetComponent<Jumper>();
 
-		if (attacker) {
+		if (attacker && !jumper) {
 			attackerHealth = collider.gameObject.GetComponent<Health>();	
 		}
 	}
@@ -24,14 +25,6 @@ public class Blocker : MonoBehaviour {
 
 		if (attacker && !jumper) {
 			animator.SetBool("isAttacking", true);
-		}
-	}
-
-	void OnTriggerExit2D(Collider2D collider) {
-		Debug.Log("Exited!");
-
-		if (animator.GetBool("isAttacking")) {
-			animator.SetBool("isAttacking", false);
 		}
 	}
 
