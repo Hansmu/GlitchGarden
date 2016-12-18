@@ -20,7 +20,6 @@ public class GameTimer : MonoBehaviour {
 		slider.value = 1;
 
 		FindWinLabel();
-		winLabel.SetActive(false);
 	}
 
 	void Update () {
@@ -41,6 +40,8 @@ public class GameTimer : MonoBehaviour {
 
 		if (!winLabel) {
 			Debug.LogWarning("Please create You Win object.");
+		} else {
+			winLabel.SetActive(false);
 		}
 	}
 

@@ -2,7 +2,7 @@
 using System.Collections;
 
 [RequireComponent (typeof(Attacker))] //If we add a Jumper, then it has to check if it has an Attacker component.
-public class Lizard : MonoBehaviour {
+public class Jumper : MonoBehaviour {
 
 	private Animator animator;
 	private Attacker attacker;
@@ -11,9 +11,9 @@ public class Lizard : MonoBehaviour {
 		animator = GetComponent<Animator>();
 		attacker = GetComponent<Attacker>();
 	}
-		
-	void Update () {
 
+	void Update () {
+	
 	}
 
 	void OnTriggerEnter2D(Collider2D collidedWith) {
@@ -22,8 +22,14 @@ public class Lizard : MonoBehaviour {
 		if (!objectCollidedWith.GetComponent<Defenders>()) {
 			return;
 		}
-			
-		animator.SetBool("isAttacking", true);
-		attacker.Attack(objectCollidedWith);
+
+		if(objectCollidedWith.GetComponent<Stone>()) { //Detects on scripts attached to the component.
+			animator.SetTrigger("jumpTrigger");
+		} else if(objectCollidedWith.GetComponent<Blocker>()) {
+			animator.SetTrigger("jumpTrigger");
+		} else {
+			animator.SetBool("isAttacking", true);
+			attacker.Attack(objectCollidedWith);
+		}
 	}
 }

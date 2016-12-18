@@ -92,3 +92,5 @@ We scaled the sprites down, say a gnome to 0.5834973. In order to have them fit 
 
 GameObject.FindObjectOfType<>() Used when the object is on a different Game Object.
 GetComponent<>() Used when the object is on the same Game Object.
+
+Install Android Studio to play test on Android. Or just download Android SDK. Maybe Unity Remote App is enough?
