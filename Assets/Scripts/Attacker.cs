@@ -6,6 +6,7 @@ public class Attacker : MonoBehaviour {
 
 	public float walkSpeed;
 	public float seenAfterEverySeconds;
+	public int pointsValue;
 
 	private GameObject currentTarget;
 	private Animator animator;

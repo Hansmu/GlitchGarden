@@ -12,17 +12,22 @@ public class OptionsController : MonoBehaviour {
 	void Start () {
 		musicManager = GameObject.FindObjectOfType<MusicManager>();
 
-		volumeSlider.value = PlayerPrefsManager.GetMasterVolume();
+		if (volumeSlider) {
+			volumeSlider.value = PlayerPrefsManager.GetMasterVolume();
+		}
 	}
 
 	void Update () {
-		musicManager.ChangeVolume(volumeSlider.value);
+		if (volumeSlider) {
+			musicManager.ChangeVolume(volumeSlider.value);
+		}
 	}
 
 	public void SaveAndExit() {
-		PlayerPrefsManager.SetMasterVolume(volumeSlider.value);
+		if (volumeSlider) {
+			PlayerPrefsManager.SetMasterVolume(volumeSlider.value);
+		}
 
-		Debug.Log(levelManager);
 		levelManager.LoadLevel("01a_Start");
 	}
 

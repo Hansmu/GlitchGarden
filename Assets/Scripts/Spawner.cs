@@ -4,6 +4,11 @@ using System.Collections;
 public class Spawner : MonoBehaviour {
 
 	public GameObject[] attackersToSpawn;
+	public Score score;
+
+	void Start() {
+		score = GameObject.FindObjectOfType<Score>();
+	}
 
 	void Update () {
 		foreach(GameObject attackerObject in attackersToSpawn) {
@@ -16,6 +21,13 @@ public class Spawner : MonoBehaviour {
 	bool isTimeToSpawn(GameObject attackerObject) {
 		Attacker attacker = attackerObject.GetComponent<Attacker>();
 		float meanSpawnDelay = attacker.seenAfterEverySeconds;
+
+		if (score) {
+			meanSpawnDelay = attacker.seenAfterEverySeconds / score.GetMultiplier();
+		} else {
+			meanSpawnDelay = attacker.seenAfterEverySeconds;
+		}
+
 		float spawnsPerSecond = 1 / meanSpawnDelay;
 
 		if (Time.deltaTime > meanSpawnDelay) {

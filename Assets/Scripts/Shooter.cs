@@ -10,7 +10,7 @@ public class Shooter : MonoBehaviour {
 	private Spawner laneSpawner;
 
 	void Start() {
-		animator = GameObject.FindObjectOfType<Animator>();
+		animator = gameObject.GetComponent<Animator>();
 		projectileParent = GameObject.Find("Projectiles");
 
 		if (!projectileParent) {
