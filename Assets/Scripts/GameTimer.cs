@@ -32,6 +32,15 @@ public class GameTimer : MonoBehaviour {
 			winLabel.SetActive(true);
 			Invoke("LoadNextLevel", audioSource.clip.length);
 			hasCalledWon = true;
+			DestroyAllTaggedObjects();
+		}
+	}
+
+	private void DestroyAllTaggedObjects() {
+		GameObject[] taggedObjectArray = GameObject.FindGameObjectsWithTag("destroyOnWin");
+
+		foreach(GameObject taggedObject in taggedObjectArray) {
+			Destroy(taggedObject);
 		}
 	}
 
